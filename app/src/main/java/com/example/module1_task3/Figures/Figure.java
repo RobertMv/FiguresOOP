@@ -9,9 +9,9 @@ public abstract class Figure {
         this.point = point;
     }
 
-    private void moveTo(Point point){
-        point.setX(point.getX() + point.getX());
-        point.setY(point.getY() + point.getY());
+    public void moveTo(int x, int y) {
+        point.setX(point.getX() + x);
+        point.setY(point.getY() + y);
     }
 
     public abstract void draw(Canvas canvas);

@@ -11,6 +11,8 @@ public class Square extends Figure implements ColorChangeable {
     public Square(Point point, int side) {
         super(point);
         this.side = side;
+        paint = new Paint();
+        paint.setColor(Color.GREEN);
     }
 
     @Override
@@ -20,8 +22,6 @@ public class Square extends Figure implements ColorChangeable {
 
     @Override
     public void draw(Canvas canvas) {
-        paint = new Paint();
-        paint.setColor(Color.GREEN);
         canvas.drawRect(
                 getPoint().getX(),
                 getPoint().getY(),

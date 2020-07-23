@@ -12,12 +12,12 @@ public class Circle extends Figure {
     public Circle(Point point, int radius) {
         super(point);
         this.radius = radius;
+        paint = new Paint();
+        paint.setColor(Color.BLUE);
     }
 
     @Override
     public void draw(Canvas canvas) {
-        paint = new Paint();
-        paint.setColor(Color.BLUE);
         canvas.drawCircle(getPoint().getX(), getPoint().getY(), getRadius(), paint);
     }
 

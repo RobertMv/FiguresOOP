@@ -12,6 +12,8 @@ public class Rectangle extends Square {
     public Rectangle(Point point, int side, int anotherSide) {
         super(point, side);
         this.anotherSide = anotherSide;
+        paint = new Paint();
+        paint.setColor(Color.BLACK);
     }
 
     @Override
@@ -21,8 +23,6 @@ public class Rectangle extends Square {
 
     @Override
     public void draw(Canvas canvas) {
-        paint = new Paint();
-        paint.setColor(Color.BLACK);
         canvas.drawRect(
                 getPoint().getX(),
                 getPoint().getY(),
